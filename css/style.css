@@ -33,6 +33,7 @@
 html,
 body {
     overflow-x: hidden;
+
 }
 
 #logo {
@@ -41,21 +42,21 @@ body {
 }
 
 header {
-    padding-top: 10px;
-    margin-top: 25px;
     display: flex;
     justify-content: space-around;
-    overflow: hidden;
     background-color: white;
     position: fixed;
-    top: -25px;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
+    height: 100px;
+    align-items: center;
+    background-color: white;
+    top:0;
+
 }
 
 #menu {
     list-style: none;
-    margin-top: 20px;
 }
 
 #menu li {
@@ -65,8 +66,8 @@ header {
 
 #menu li a:hover {
     color: #000;
-    border-top: 3px solid #46a7d5;
-    padding-top: 27px;
+    border-top: 3px  solid #46a7d5;
+    padding-top: 38px;
 }
 
 #menu a {
@@ -107,6 +108,7 @@ header {
         text-align: center;
         margin-top: 15px;
         opacity: 0.8;
+
     }
 
 }
@@ -119,7 +121,7 @@ header {
 
 .angle_left {
     position: absolute;
-    top: 42%;
+    top: 50%;
     width: 30px;
     height: 70px;
     background-color: black;
@@ -149,9 +151,8 @@ header {
 
 .angle_right {
     position: absolute;
-    top: 42%;
+    top: 50%;
     right: 0;
-    margin-right: 10px;
     width: 30px;
     height: 70px;
     background-color: black;
@@ -173,6 +174,9 @@ header {
     display: flex;
     flex-direction: row;
     text-align: center;
+    align-items: baseline;
+    position:relative;
+    padding-top: 100px;
 }
 
 
@@ -194,15 +198,15 @@ header {
     font-family: 'RobotoBlack';
     font-size: 32px;
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 40%;
+    left: 10%;
 }
 
 #slider img {
     display: flex;
     width: 100%;
     align-items: baseline;
-    margin-top: 100px;
+
 }
 
 #small_text {
@@ -230,6 +234,7 @@ header {
     border-radius: 4%;
     border-bottom: 3px solid #3486ae;
     font-family: 'RobotoBold';
+    cursor:pointer;
 }
 
 @media only screen and (max-width: 950px) {
@@ -241,6 +246,7 @@ header {
 
     #slider {
         margin: auto;
+        margin-top: 100px;
     }
 
     #slider img {
@@ -255,9 +261,8 @@ header {
     #slogan_title {
         flex-direction: column;
         margin-right: 15%;
-        margin-top: -60px;
         text-align: center;
-     
+
     }
 
     #slogan_text {
@@ -266,7 +271,7 @@ header {
     }
 
     #small_text {
-    font-family: 'RobotoLight';
+        font-family: 'RobotoLight';
         font-weight: none;
         color: black;
         position: relative;
@@ -381,7 +386,7 @@ span {
     .services {
         display: flex;
         flex-direction: column;
-        margin-top: 500px;
+        margin-top: 300px;
     }
 }
 
@@ -398,7 +403,7 @@ span {
         align-items: center;
     }
 
-    #img_about {  
+    #img_about {
         width: 430px;
         height: 300px;
         margin-bottom: 40px;
@@ -456,28 +461,41 @@ span {
     width: 120px;
     height: 50px;
     float: left;
-    display: flex;
-    align-items: center;
     color: #86888d;
     font-family: 'RobotoMedium';
     margin-bottom: 20px;
+    position: relative;
+    cursor:pointer;
 
 
 }
 
-#btn_first:after,
-#btn_second:after,
-#btn_third:after,
-#btn_last:after {
+#btn_first:hover:after,
+#btn_second:hover:after,
+#btn_third:hover:after,
+#btn_last:hover:after {
     content: '';
     border: 12px solid transparent;
     border-top: 12px solid #3486ae;
     position: absolute;
-    top: 0%;
+    top: 100%;
     left: 50%;
     margin-left: -12px;
-    margin-top: 50px;
-    bottom: -24px;
+    position: absolute;
+}
+
+#btn_first:focus:after,
+#btn_second:focus:after,
+#btn_third:focus:after,
+#btn_last:focus:after {
+    content: '';
+    border: 12px solid transparent;
+    border-top: 12px solid #3486ae;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12px;
+    position: absolute;
 }
 
 .btn-group {
@@ -499,10 +517,9 @@ span {
     width: 120px;
     height: 39px;
     text-align: center;
-    margin-bottom: 10px;
     border-bottom: 3px solid #3486ae;
     height: 50px;
-
+    outline: none;
 }
 
 
@@ -522,7 +539,7 @@ span {
         flex-direction: column;
     }
 
-    #btn_first,
+#btn_first,
 #btn_second,
 #btn_third,
 #btn_last {
@@ -577,6 +594,7 @@ span {
 #portfolio {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #f5f5f5;
 }
 
@@ -633,42 +651,31 @@ span {
     font-family: 'RobotoRegular';
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1200px) {
     .portfolio_img {
-        margin:1%;
-        width:30%;
-        margin-left: 10%; 
-
-    }
-}
-
-@media only screen and (max-width: 1300px) {
-    .portfolio_img {
-        margin:1%;
         width:35%;
-        margin-left: 10%; 
-
     }
 }
 
 @media only screen and (max-width: 950px) {
- 
+
+    #portfolio {
+        justify-content: center;
+    }
 
     .portfolio_img {
-        margin:5%;
         width:80%;
-        margin-left: 10%; 
     }
-    
+
     .img_portfolio_group {
         width:100%
     }
-    
+
     .eyes {
         font-size: 20px;
         color: white;
     }
-    
+
     .border_eyes {
         position: absolute;
         border-radius: 50%;
@@ -679,8 +686,8 @@ span {
         background-color: rgba(70, 167, 213, 1);
         opacity: 1;
     }
- 
-    
+
+
     .text_portfolio {
         color: white;
         margin-top: 200px;
@@ -692,11 +699,9 @@ span {
 @media only screen and (max-width: 450px) {
 
     .portfolio_img {
-        margin:1%;
         width:80%;
-        margin-left: 10%; 
     }
-    
+
 
     .bg_portfolio {
         width: 100%;
@@ -751,6 +756,7 @@ span {
 
 #map:hover {
     opacity: 1;
+    transition: 2s;
 }
 
 
@@ -810,6 +816,7 @@ textarea {
     border-radius: 4%;
     border-bottom: 3px solid #3486ae;
     font-family: 'RobotoBold';
+    cursor:pointer;
 }
 
 @media only screen and (max-width: 950px) {
