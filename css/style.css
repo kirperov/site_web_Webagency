@@ -32,8 +32,9 @@
 
 html,
 body {
-    overflow-x: hidden;
-
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+    
 }
 
 #logo {
@@ -88,6 +89,9 @@ header {
     #menu {
         margin: auto;
         margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: -10px;
+
     }
 
     #menu li {
@@ -142,7 +146,7 @@ header {
 }
 
 .angle_left i {
-    margin-left: 5px;
+    margin-left: -10px;
 }
 
 .angle_right i {
@@ -206,7 +210,7 @@ header {
     display: flex;
     width: 100%;
     align-items: baseline;
-
+    border-bottom:5px solid #3486ae;
 }
 
 #small_text {
@@ -305,6 +309,7 @@ hr {
     text-align: center;
     width: 10em;
     margin-bottom: -0.9em;
+    margin-top: -20px;
 }
 
 .circle {
@@ -382,6 +387,14 @@ span {
     border-color: #fdfdfd;
 }
 
+@media only screen and (max-width:450px) {
+    #img_about {
+        max-width: 250px;
+        max-height: 150px;
+        margin-bottom: 150px;
+    }
+}
+
 @media only screen and (max-width:950px) {
     .services {
         display: flex;
@@ -404,8 +417,8 @@ span {
     }
 
     #img_about {
-        width: 430px;
-        height: 300px;
+        width: 440px;
+        height: 290px;
         margin-bottom: 40px;
     }
 
@@ -466,8 +479,6 @@ span {
     margin-bottom: 20px;
     position: relative;
     cursor:pointer;
-
-
 }
 
 #btn_first:hover:after,
@@ -481,7 +492,6 @@ span {
     top: 100%;
     left: 50%;
     margin-left: -12px;
-    position: absolute;
 }
 
 #btn_first:focus:after,
@@ -491,7 +501,6 @@ span {
     content: '';
     border: 12px solid transparent;
     border-top: 12px solid #3486ae;
-    position: absolute;
     top: 100%;
     left: 50%;
     margin-left: -12px;
@@ -512,13 +521,8 @@ span {
 #btn_third:focus,
 #btn_last:focus {
     background: #46a7d5;
-    position: relative;
     color: white;
-    width: 120px;
-    height: 39px;
-    text-align: center;
     border-bottom: 3px solid #3486ae;
-    height: 50px;
     outline: none;
 }
 
@@ -543,16 +547,6 @@ span {
 #btn_second,
 #btn_third,
 #btn_last {
-    border: 0px;
-    padding: 10px 24px;
-    background-color: #e4e4e4;
-    width: 120px;
-    height: 50px;
-    float: left;
-    display: flex;
-    align-items: center;
-    color: #86888d;
-    font-family: 'RobotoMedium';
     margin-bottom: 0px;
 }
 
@@ -579,9 +573,6 @@ span {
       margin-bottom: 0px;
     }
 
-    #btn_first:after,
-    #btn_second:after,
-    #btn_third:after,
     #btn_last:after {
         display: none;
     }
