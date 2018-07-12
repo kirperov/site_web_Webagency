@@ -119,7 +119,7 @@ header {
     top: 50%;
     width: 30px;
     height: 70px;
-    background-color: black;
+    background-color: rgb(2, 2, 2);
     opacity: 0.5;
     border-left: 1px solid black;
     border-top: 1px solid black;
@@ -149,7 +149,7 @@ header {
     right: 0;
     width: 30px;
     height: 70px;
-    background-color: black;
+    background-color: rgb(2, 2, 2);
     opacity: 0.5;
     border-left: 1px solid black;
     border-top: 1px solid black;
@@ -261,7 +261,6 @@ header {
     }
 
     #small_text {
-        font-weight: none;
         color: black;
         position: relative;
         width: 80%;
