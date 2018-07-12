@@ -32,9 +32,7 @@
 
 html,
 body {
-    /* overflow-x: hidden; */
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;  
 }
 
 #logo {
@@ -45,7 +43,6 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    background-color: white;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -81,24 +78,20 @@ header {
 
 @media only screen and (max-width: 950px) {
 
-
     #logo {
         display: none;
     }
 
     #menu {
-        margin: auto;
         margin-bottom: 20px;
         margin-right: 10px;
         margin-left: -10px;
-
     }
 
     #menu li {
-        align-items: center;
         font-size: 80%;
         margin: auto;
-        margin-right: 10px;
+        margin-right: 10px; 
     }
 
     #menu li a:hover {
@@ -112,9 +105,7 @@ header {
         text-align: center;
         margin-top: 15px;
         opacity: 0.8;
-
     }
-
 }
 
 /* End menu */
@@ -135,7 +126,6 @@ header {
     border-bottom: 1px solid black;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-
 }
 
 .angle_left i,
@@ -173,7 +163,6 @@ header {
     background-color: #46a7d5;
 }
 
-
 #slider {
     display: flex;
     flex-direction: row;
@@ -182,7 +171,6 @@ header {
     position:relative;
     padding-top: 100px;
 }
-
 
 #slogan {
     color: #46a7d5;
@@ -209,7 +197,7 @@ header {
 #slider img {
     display: flex;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
     border-bottom:5px solid #3486ae;
 }
 
@@ -258,7 +246,6 @@ header {
      }
 
     #slogan {
-        color: #46a7d5;
         font-size: 80%;
     }
 
@@ -266,16 +253,14 @@ header {
         flex-direction: column;
         margin-right: 15%;
         text-align: center;
-
     }
-
+    
     #slogan_text {
         color: black;
         font-size: 70%;
     }
 
     #small_text {
-        font-family: 'RobotoLight';
         font-weight: none;
         color: black;
         position: relative;
@@ -397,8 +382,6 @@ span {
 
 @media only screen and (max-width:950px) {
     .services {
-        display: flex;
-        flex-direction: column;
         margin-top: 300px;
     }
 }
@@ -411,9 +394,7 @@ span {
     }
 
     .container_about {
-        display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     #img_about {
@@ -434,12 +415,8 @@ span {
     }
 
     .circle_service {
-        border-radius: 50%;
-        color: #46a7d5;
-        text-align: center;
         margin-left: -1px;
         margin-top: -20px;
-        font-size: 13px;
     }
 }
 
@@ -476,7 +453,6 @@ span {
     float: left;
     color: #86888d;
     font-family: 'RobotoMedium';
-    margin-bottom: 20px;
     position: relative;
     cursor:pointer;
 }
@@ -508,7 +484,7 @@ span {
 }
 
 .btn-group {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 
@@ -576,7 +552,6 @@ span {
     #btn_last:after {
         display: none;
     }
-
 }
 
 
@@ -592,6 +567,7 @@ span {
 .portfolio_img {
     margin:1%;
     width:23%;
+    overflow:hidden;
 }
 
 .img_portfolio_group {
@@ -625,7 +601,6 @@ span {
     border-bottom: 6.2em solid rgba(0, 0, 0, 0.4);
 }
 
-
 .bg_portfolio:hover {
     opacity: 1;
     transition: 2s;
@@ -657,41 +632,10 @@ span {
     .portfolio_img {
         width:80%;
     }
-
-    .img_portfolio_group {
-        width:100%
-    }
-
-    .eyes {
-        font-size: 20px;
-        color: white;
-    }
-
-    .border_eyes {
-        position: absolute;
-        border-radius: 50%;
-        margin-top: 150px;
-        margin-left: 80%;
-        padding: 15px;
-        border: 2px solid white;
-        background-color: rgba(70, 167, 213, 1);
-        opacity: 1;
-    }
-
-
-    .text_portfolio {
-        color: white;
-        margin-top: 200px;
-        margin-left: 20px;
-        font-family: 'RobotoBold';
-    }
 }
 
 @media only screen and (max-width: 450px) {
 
-    .portfolio_img {
-        width:80%;
-    }
 
 
     .bg_portfolio {
@@ -703,9 +647,7 @@ span {
     }
 
     .eyes {
-
         font-size: 15px;
-        color: white;
     }
 
     .text_portfolio {
@@ -719,9 +661,7 @@ span {
         margin-left: 75%;
         padding: 15px;
         border: 2px solid white;
-        background-color: rgba(70, 167, 213, 1);
-        opacity: 1;
-    }
+    }    
 }
 
 /* End projects */
@@ -840,6 +780,7 @@ textarea {
     }
 
     #btn_form {
+        margin-top: 5%;
         margin-bottom: 5%;
         width: 60%;
     }
