@@ -1,6 +1,5 @@
 /* Fonts */
 
-@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 @font-face {
     font-family: 'RobotoMedium';
     src: url('../fonts/Roboto-Medium.ttf');
@@ -32,7 +31,7 @@
 
 html,
 body {
-    scroll-behavior: smooth;  
+    scroll-behavior: smooth;
 }
 
 #logo {
@@ -49,8 +48,7 @@ header {
     height: 100px;
     align-items: center;
     background-color: white;
-    top:0;
-
+    top: 0;
 }
 
 #menu {
@@ -64,7 +62,7 @@ header {
 
 #menu li a:hover {
     color: #000;
-    border-top: 3px  solid #46a7d5;
+    border-top: 3px solid #46a7d5;
     padding-top: 38px;
 }
 
@@ -74,24 +72,51 @@ header {
     font-family: 'RobotoMedium';
 }
 
+#hamburger {
+    display: none;
+}
+
+/* For navigation navbar */
+
+#main_services {
+    height: 50px;
+    margin-top: -50px;
+}
+
+#main_projects {
+    height: 50px;
+    margin-top: -50px;
+}
+
+main_contact {
+    height: 50px;
+    margin-top: -50px;
+}
+
 /* Media queries for responsive menu */
 
 @media only screen and (max-width: 950px) {
 
+    header {
+        background-color: white;
+    }
+
     #logo {
-        display: none;
+        width: 30%;
     }
 
     #menu {
-        margin-bottom: 20px;
         margin-right: 10px;
-        margin-left: -10px;
     }
 
     #menu li {
-        font-size: 80%;
+        padding-top: 30px;
+        font-size: 100%;
         margin: auto;
-        margin-right: 10px; 
+        margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
     }
 
     #menu li a:hover {
@@ -101,12 +126,52 @@ header {
     }
 
     #navbar {
-        margin-right: 20px;
-        text-align: center;
-        margin-top: 15px;
-        opacity: 0.8;
+        margin-top: 60px;
+        margin-left: -10px;
+        background-color: white;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #hamburger + label {
+        background: #2ea3bd;
+        cursor: pointer;
+        font-family: 'RobotoMedium';
+        font-size: 3rem;
+        position: relative;
+        vertical-align: middle;
+        z-index: 10;
+        margin-left: 50%;
+    }
+
+    #hamburger + label:after {
+        content: "|||";
+        transform: rotate(90deg);
+        display: inline-block;
+        transition: transform .3s;
+        width: 60px;
+        margin-top: 20px;
+    }
+
+    #hamburger:checked + label:after {
+        color: rgba(255, 30, 30, 0.815);
+    }
+
+    #hamburger + label + nav {
+        left: -100%;
+        position: absolute;
+        transition: left .3s;
+    }
+
+    #hamburger:checked + label + nav {
+        left: 0;
+        outline: 10000px solid rgba(0, 0, 0, .7);
     }
 }
+
+
 
 /* End menu */
 
@@ -168,7 +233,7 @@ header {
     flex-direction: row;
     text-align: center;
     align-items: baseline;
-    position:relative;
+    position: relative;
     padding-top: 100px;
 }
 
@@ -176,11 +241,13 @@ header {
     color: #46a7d5;
     font-size: 32px;
     font-family: 'RobotoBold';
+    margin-bottom: 40px;
 }
 
 #slogan_text {
     color: white;
     font-family: 'RobotoBold';
+    border: none;
 }
 
 #slogan_title {
@@ -198,7 +265,7 @@ header {
     display: flex;
     width: 100%;
     align-items: center;
-    border-bottom:5px solid #3486ae;
+    border-bottom: 5px solid #3486ae;
 }
 
 #small_text {
@@ -226,7 +293,8 @@ header {
     border-radius: 4%;
     border-bottom: 3px solid #3486ae;
     font-family: 'RobotoBold';
-    cursor:pointer;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 950px) {
@@ -239,11 +307,12 @@ header {
     #slider {
         margin: auto;
         margin-top: 100px;
+        margin-left: 30px;
     }
 
     #slider img {
         display: none;
-     }
+    }
 
     #slogan {
         font-size: 80%;
@@ -254,7 +323,7 @@ header {
         margin-right: 15%;
         text-align: center;
     }
-    
+
     #slogan_text {
         color: black;
         font-size: 70%;
@@ -264,6 +333,10 @@ header {
         color: black;
         position: relative;
         width: 80%;
+    }
+
+    #button_slider {
+        position: relative;
     }
 }
 
@@ -283,10 +356,6 @@ h2 {
     text-align: center;
 }
 
-h3 {
-    font-size: 30px;
-    color: #000;
-}
 
 hr {
     border-top: 1px solid #f0f0f0;
@@ -453,7 +522,7 @@ span {
     color: #86888d;
     font-family: 'RobotoMedium';
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 #btn_first:hover:after,
@@ -513,17 +582,17 @@ span {
 }
 
 @media only screen and (max-width: 550px) {
-      .btn-group {
+    .btn-group {
         display: flex;
         flex-direction: column;
     }
 
-#btn_first,
-#btn_second,
-#btn_third,
-#btn_last {
-    margin-bottom: 0px;
-}
+    #btn_first,
+    #btn_second,
+    #btn_third,
+    #btn_last {
+        margin-bottom: 0px;
+    }
 
     #btn_first {
         border-bottom-left-radius: 0%;
@@ -545,7 +614,7 @@ span {
     #btn_second:focus,
     #btn_third:focus,
     #btn_last:focus {
-      margin-bottom: 0px;
+        margin-bottom: 0px;
     }
 
     #btn_last:after {
@@ -564,13 +633,13 @@ span {
 }
 
 .portfolio_img {
-    margin:1%;
-    width:23%;
-    overflow:hidden;
+    margin: 1%;
+    width: 23%;
+    overflow: hidden;
 }
 
 .img_portfolio_group {
-    width:100%
+    width: 100%
 }
 
 .eyes {
@@ -618,7 +687,7 @@ span {
 
 @media only screen and (max-width: 1200px) {
     .portfolio_img {
-        width:35%;
+        width: 35%;
     }
 }
 
@@ -629,7 +698,7 @@ span {
     }
 
     .portfolio_img {
-        width:80%;
+        width: 80%;
     }
 }
 
@@ -660,7 +729,7 @@ span {
         margin-left: 75%;
         padding: 15px;
         border: 2px solid white;
-    }    
+    }
 }
 
 /* End projects */
@@ -669,6 +738,11 @@ span {
 
 .container_contact {
     margin-top: 5%;
+}
+
+h3 {
+    font-size: 30px;
+    color: #000;
 }
 
 .contact_color {
@@ -746,7 +820,7 @@ textarea {
     border-radius: 4%;
     border-bottom: 3px solid #3486ae;
     font-family: 'RobotoBold';
-    cursor:pointer;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 950px) {
