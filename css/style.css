@@ -404,6 +404,7 @@ hr {
 
 .title_about {
     color: black;
+    font-size: 15px;
 }
 
 
@@ -413,7 +414,7 @@ hr {
     align-content: space-around;
 }
 
-.description_services > p {
+.description_services p, h3 {
     margin-left: 20px;
 }
 
@@ -668,16 +669,18 @@ span {
     border-bottom: 6.2em solid rgba(0, 0, 0, 0.4);
 }
 
+.bg_portfolio h3 {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 180px;
+    margin-left: 10px;
+    font-family: 'RobotoBold';
+    color: white;
+}
+
 .bg_portfolio:hover {
     opacity: 1;
     transition: 2s;
-}
-
-.text_portfolio {
-    color: white;
-    margin-top: 200px;
-    margin-left: 20px;
-    font-family: 'RobotoBold';
 }
 
 .name_portfolio {
@@ -703,6 +706,14 @@ span {
 
 @media only screen and (max-width: 450px) {
 
+.bg_portfolio h3 {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 110px;
+    margin-left: 30px;
+    font-family: 'RobotoBold';
+    color: white;
+}
 
 
     .bg_portfolio {
@@ -715,11 +726,6 @@ span {
 
     .eyes {
         font-size: 15px;
-    }
-
-    .text_portfolio {
-        margin-top: 120px;
-        margin-left: 30px;
     }
 
     .border_eyes {
